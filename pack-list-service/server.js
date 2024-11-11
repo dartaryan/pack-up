@@ -46,3 +46,15 @@ app.put('/api/v1/packlist/:id', (req, res) => {
         return res.json({message: 'Item updated successfully'});
     });
 });
+
+app.delete('/api/v1/packlist/:id', (req, res) => {
+    const existingId = Number(req.params.id);
+    const filteredItem = packList.filter(item => item.id !== existingId);
+    if (filteredItem.length === packList.length) return res.status(404).json({error: 'Item not found'});
+    packList.splice(0, packList.length, ...filteredItem);
+    fs.writeFile('./items.json', JSON.stringify(packList), (err, data) => {
+        if (err) return res.status(500).json({error: 'Error writing to file.'});
+        return res.json({message: 'Item deleted successfully'});
+    });
+});
+

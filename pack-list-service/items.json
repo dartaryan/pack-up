@@ -84,15 +84,15 @@
     "status": "packed"
   },
   {
-    "id": 15,
-    "checklist": "work",
-    "item": "ID",
-    "status": "packed"
-  },
-  {
     "id": 16,
     "checklist": "work",
     "item": "keys",
+    "status": "packed"
+  },
+  {
+    "id": 17,
+    "checklist": "beach",
+    "item": "towel",
     "status": "packed"
   }
 ]
