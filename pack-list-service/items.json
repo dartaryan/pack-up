@@ -1,0 +1,98 @@
+[
+  {
+    "id": 100,
+    "checklist": "work",
+    "item": "laptop",
+    "status": "packed"
+  },
+  {
+    "id": 101,
+    "checklist": "work",
+    "item": "mouse",
+    "status": "packed"
+  },
+  {
+    "id": 102,
+    "checklist": "work",
+    "item": "headphones",
+    "status": "packed"
+  },
+  {
+    "id": 103,
+    "checklist": "work",
+    "item": "charger",
+    "status": "packed"
+  },
+  {
+    "id": 104,
+    "checklist": "work",
+    "item": "notebook",
+    "status": "packed"
+  },
+  {
+    "id": 105,
+    "checklist": "work",
+    "item": "pen",
+    "status": "packed"
+  },
+  {
+    "id": 106,
+    "checklist": "work",
+    "item": "business cards",
+    "status": "packed"
+  },
+  {
+    "id": 107,
+    "checklist": "work",
+    "item": "snacks",
+    "status": "packed"
+  },
+  {
+    "id": 108,
+    "checklist": "work",
+    "item": "water bottle",
+    "status": "packed"
+  },
+  {
+    "id": 109,
+    "checklist": "work",
+    "item": "umbrella",
+    "status": "packed"
+  },
+  {
+    "id": 110,
+    "checklist": "work",
+    "item": "jacket",
+    "status": "packed"
+  },
+  {
+    "id": 111,
+    "checklist": "work",
+    "item": "sunglasses",
+    "status": "packed"
+  },
+  {
+    "id": 112,
+    "checklist": "work",
+    "item": "wallet",
+    "status": "packed"
+  },
+  {
+    "id": 113,
+    "checklist": "work",
+    "item": "keys",
+    "status": "packed"
+  },
+  {
+    "id": 114,
+    "checklist": "work",
+    "item": "phone",
+    "status": "packed"
+  },
+  {
+    "id": 115,
+    "checklist": "work",
+    "item": "ID",
+    "status": "packed"
+  }
+]
