@@ -1,97 +1,97 @@
 [
   {
     "id": 1,
-    "checklist": "work",
+    "packlist": "work",
     "item": "laptop",
     "status": "packed"
   },
   {
     "id": 2,
-    "checklist": "work",
+    "packlist": "work",
     "item": "mouse",
     "status": "packed"
   },
   {
     "id": 3,
-    "checklist": "work",
+    "packlist": "work",
     "item": "charger",
     "status": "packed"
   },
   {
     "id": 4,
-    "checklist": "work",
+    "packlist": "work",
     "item": "headphones",
     "status": "packed"
   },
   {
     "id": 5,
-    "checklist": "work",
+    "packlist": "work",
     "item": "notepad",
     "status": "packed"
   },
   {
     "id": 6,
-    "checklist": "work",
+    "packlist": "work",
     "item": "pen",
     "status": "packed"
   },
   {
     "id": 7,
-    "checklist": "work",
+    "packlist": "work",
     "item": "snacks",
     "status": "packed"
   },
   {
     "id": 8,
-    "checklist": "work",
+    "packlist": "work",
     "item": "water bottle",
     "status": "packed"
   },
   {
     "id": 9,
-    "checklist": "work",
+    "packlist": "work",
     "item": "umbrella",
     "status": "packed"
   },
   {
     "id": 10,
-    "checklist": "work",
+    "packlist": "work",
     "item": "business cards",
     "status": "packed"
   },
   {
     "id": 11,
-    "checklist": "work",
+    "packlist": "work",
     "item": "hand sanitizer",
     "status": "packed"
   },
   {
     "id": 12,
-    "checklist": "work",
+    "packlist": "work",
     "item": "face mask",
     "status": "packed"
   },
   {
     "id": 13,
-    "checklist": "work",
+    "packlist": "work",
     "item": "sunglasses",
     "status": "packed"
   },
   {
     "id": 14,
-    "checklist": "work",
+    "packlist": "work",
     "item": "wallet",
     "status": "packed"
   },
   {
     "id": 16,
-    "checklist": "work",
+    "packlist": "work",
     "item": "keys",
     "status": "packed"
   },
   {
     "id": 17,
-    "checklist": "beach",
+    "packlist": "beach",
     "item": "towel",
     "status": "packed"
   }
