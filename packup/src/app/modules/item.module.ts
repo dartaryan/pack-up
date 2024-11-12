@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { PackListRoutingModule } from './pack-list-routing.module';
+import { ItemRoutingModule } from './item-routing.module';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    PackListRoutingModule
+    ItemRoutingModule
   ]
 })
-export class PackListModule { }
+export class ItemModule { }
