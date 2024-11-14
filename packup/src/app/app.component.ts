@@ -1,11 +1,10 @@
-import {Component, inject} from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ItemModule} from './modules/item.module';
-import {ItemService} from './services/item.service';
 import {AsyncPipe} from '@angular/common';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import {faHome, faSearch, faSuitcaseRolling, faPlus} from '@fortawesome/free-solid-svg-icons';
+import {faHome, faPlus, faSearch, faSuitcaseRolling} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +13,7 @@ import {faHome, faSearch, faSuitcaseRolling, faPlus} from '@fortawesome/free-sol
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
+
 export class AppComponent {
   title = 'packup';
   protected readonly faHome = faHome;
