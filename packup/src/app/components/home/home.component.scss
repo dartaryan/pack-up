@@ -3,6 +3,16 @@ $turquoise: #2EB8A5;
 $light-gray: #f8f9fa;
 $table-border: rgba(0, 0, 0, 0.1);
 
+.background-card {
+  background-color: $dark-gray;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+}
+
+
 .container {
   max-width: 1200px;
   margin: 0 auto;

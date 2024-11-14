@@ -1,8 +1,9 @@
 import {Routes} from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
+import {CreateComponent} from './components/create/create.component';
 
-export const routes: Routes = [
-  {path: 'items/home', component: HomeComponent},
-  {path: 'items', redirectTo: 'items/home', pathMatch: 'full'},
-  {path: '', redirectTo: 'items/home', pathMatch: 'full'},
-];
+export const routes: Routes = [{path: 'items/home', component: HomeComponent}, {
+  path: 'items',
+  redirectTo: 'items/home',
+  pathMatch: 'full'
+}, {path: '', redirectTo: 'items/home', pathMatch: 'full'}, {path: 'items/create', component: CreateComponent},];
