@@ -1,78 +1,123 @@
 $dark-gray: #333333;
 $turquoise: #2EB8A5;
+$danger-red: #e74c3c;
 $light-gray: #f8f9fa;
-$table-border: rgba(0, 0, 0, 0.1);
 
 .background-card {
   background-color: $dark-gray;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-  display: flex;
-  justify-content: center;
 }
 
-
 .container {
-  max-width: 1200px;
+  max-width: 70%;
   margin: 0 auto;
   padding: 20px;
-
-  h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: $turquoise;
-    text-align: center;
-    margin-bottom: 20px;
-  }
+  overflow-x: hidden;
 }
 
 .custom-table {
   width: 100%;
-  border-collapse: collapse;
   background-color: $light-gray;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead {
+    background-color: $turquoise;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
 
   th, td {
     padding: 12px 20px;
     text-align: left;
   }
 
-  thead {
-    background-color: $turquoise;
-    color: white;
+  .table-body-scroll {
+    max-height: 400px; /* Adjust based on desired scroll area */
+    overflow-y: auto;
 
-    th {
-      font-size: 1rem;
-      font-weight: 500;
-      text-transform: uppercase;
+    /* Custom scrollbar styling */
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: lighten($dark-gray, 20%);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $turquoise;
+      border-radius: 10px;
+      border: 2px solid lighten($dark-gray, 20%);
     }
   }
 
-  tbody {
-    tr {
-      border-bottom: 1px solid $table-border;
+  .actions-column {
+    width: min-content;
+    text-align: center;
+    white-space: nowrap;
+  }
 
-      &:nth-child(even) {
-        background-color: lighten($light-gray, 5%);
-      }
+  .actions {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .table-row {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    &:hover .actions {
+      opacity: 1;
+    }
+
+    &:nth-child(even) {
+      background-color: lighten($light-gray, 5%);
+    }
+
+    &:hover {
+      background-color: $turquoise;
+      color: white;
+    }
+  }
+
+  .icon-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: lighten(white, 20%);
+    }
+
+    &.edit-button {
+      color: $dark-gray;
 
       &:hover {
-        background-color: $turquoise;
-        color: white;
-
-        td {
-          color: white;
-        }
+        color: lighten($dark-gray, 10%);
       }
     }
 
-    td {
-      font-size: 0.95rem;
-      color: $dark-gray;
-      transition: color 0.3s;
+    &.delete-button {
+      color: $danger-red;
+
+      &:hover {
+        color: lighten($danger-red, 10%);
+      }
     }
   }
 }

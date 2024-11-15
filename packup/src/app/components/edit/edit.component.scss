@@ -1,0 +1,106 @@
+$dark-gray: #333333;
+$turquoise: #2EB8A5;
+$light-gray: #f8f9fa;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$danger-red: #e74c3c;
+
+.background-card {
+  background-color: $dark-gray;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+
+  .custom-form {
+    margin: 70px auto;
+    width: 600px;
+    background-color: $light-gray;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      position: relative;
+
+      label {
+        font-size: 1rem;
+        font-weight: 500;
+        color: $dark-gray;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+
+        .label-icon {
+          color: $turquoise;
+          font-size: 1.1rem;
+        }
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid lighten($dark-gray, 40%);
+        border-radius: 30px;
+        font-size: 1rem;
+        color: $dark-gray;
+        background-color: white;
+        transition: box-shadow 0.3s ease, transform 0.2s ease;
+
+        &:focus {
+          border-color: $turquoise;
+          box-shadow: 0px 0px 8px rgba($turquoise, 0.5);
+          transform: scale(1.02);
+          outline: none;
+        }
+      }
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      margin-top: 10px;
+      gap: 10px;
+
+      .btn {
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-size: 1rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .submit-button {
+        background-color: $turquoise;
+        color: white;
+        border: 2px solid $turquoise;
+
+        &:hover {
+          background-color: lighten($turquoise, 10%);
+          color: $dark-gray;
+        }
+      }
+
+      .cancel-button {
+        background-color: $danger-red;
+        color: white;
+        border: 2px solid $danger-red;
+
+        &:hover {
+          background-color: lighten($danger-red, 10%);
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+}

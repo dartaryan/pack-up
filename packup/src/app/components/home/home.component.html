@@ -1,26 +1,41 @@
 <div class="background-card">
-@if (items$ | async; as items) {
-  <div class="container">
-    <table class="custom-table">
-      <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Name</th>
-        <th scope="col">Packlist</th>
-        <th scope="col">Status</th>
-      </tr>
-      </thead>
-      <tbody>
-        @for (item of items; track item.id) {
+  @if (items$ | async; as items) {
+    <div class="container">
+      <div class="custom-table">
+        <table>
+          <thead>
           <tr>
-            <td>{{ item.id }}</td>
-            <td>{{ item.name }}</td>
-            <td>{{ item.packlist }}</td>
-            <td>{{ item.status }}</td>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Packlist</th>
+            <th scope="col">Status</th>
+            <th scope="col" class="actions-column">Actions</th>
           </tr>
-        }
-      </tbody>
-    </table>
-  </div>
-}
-  </div>
+          </thead>
+        </table>
+        <div class="table-body-scroll">
+          <table>
+            <tbody>
+              @for (item of items; track item.id) {
+                <tr class="table-row">
+                  <td>{{ item.id }}</td>
+                  <td>{{ item.name }}</td>
+                  <td>{{ item.packlist }}</td>
+                  <td>{{ item.status }}</td>
+                  <td class="actions">
+                    <button class="btn icon-button edit-button" [routerLink]="['/items/edit',item.id]">
+                      <fa-icon [icon]="faEdit"></fa-icon>
+                    </button>
+                    <button class="btn icon-button delete-button">
+                      <fa-icon [icon]="faTrashAlt"></fa-icon>
+                    </button>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  }
+</div>
