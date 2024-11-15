@@ -26,7 +26,7 @@
                     <button class="btn icon-button edit-button" [routerLink]="['/items/edit',item.id]">
                       <fa-icon [icon]="faEdit"></fa-icon>
                     </button>
-                    <button class="btn icon-button delete-button">
+                    <button class="btn icon-button delete-button" (click)="onDelete(item.id)">
                       <fa-icon [icon]="faTrashAlt"></fa-icon>
                     </button>
                   </td>
