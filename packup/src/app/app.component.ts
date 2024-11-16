@@ -5,6 +5,7 @@ import {ItemModule} from './modules/item.module';
 import {AsyncPipe} from '@angular/common';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {faHome, faPlus, faSearch, faSuitcaseRolling} from '@fortawesome/free-solid-svg-icons';
+import {map} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -20,4 +21,5 @@ export class AppComponent {
   protected readonly faSuitcaseRolling = faSuitcaseRolling;
   protected readonly faSearch = faSearch;
   protected readonly faPlus = faPlus;
+
 }

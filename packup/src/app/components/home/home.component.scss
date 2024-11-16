@@ -2,12 +2,52 @@ $dark-gray: #333333;
 $turquoise: #2EB8A5;
 $danger-red: #e74c3c;
 $light-gray: #f8f9fa;
+$shadow-color: rgba(0, 0, 0, 0.2);
+$success-green: #28a745;
 
 .background-card {
   background-color: $dark-gray;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.search-section {
+  .search-input-wrapper {
+    position: relative;
+    width: 250px;
+    transition: all 0.3s ease;
+
+    &:focus-within {
+      width: 300px;
+    }
+
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      color: $turquoise;
+      font-size: 1.2rem;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 0.375rem 1rem 0.375rem 2.5rem;
+      border-radius: 30px;
+      border: 1px solid $turquoise;
+      background-color: $light-gray;
+      transition: all 0.3s ease;
+
+      &:focus {
+        box-shadow: 0 0 10px rgba($turquoise, 0.5);
+        border-color: $turquoise;
+        outline: none;
+      }
+    }
+  }
 }
 
 .container {
@@ -43,16 +83,17 @@ $light-gray: #f8f9fa;
   }
 
   .table-body-scroll {
-    max-height: 400px; /* Adjust based on desired scroll area */
+    max-height: 400px;
     overflow-y: auto;
 
-    /* Custom scrollbar styling */
     &::-webkit-scrollbar {
       width: 10px;
     }
+
     &::-webkit-scrollbar-track {
       background: lighten($dark-gray, 20%);
     }
+
     &::-webkit-scrollbar-thumb {
       background-color: $turquoise;
       border-radius: 10px;

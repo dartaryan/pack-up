@@ -1,10 +1,10 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {Item} from '../../models/item';
-import {ItemService} from '../../services/item.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {FaIconComponent} from '@fortawesome/angular-fontawesome';
 import {faClipboardCheck, faList, faUserEdit} from '@fortawesome/free-solid-svg-icons';
+import {Item} from '../../models/item';
+import {ItemService} from '../../services/item.service';
 
 @Component({
   selector: 'app-edit',

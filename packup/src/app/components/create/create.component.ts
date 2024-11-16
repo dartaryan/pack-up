@@ -1,8 +1,8 @@
-import {Component, inject} from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {Item} from '../../models/item';
-import {ItemService} from '../../services/item.service';
-import {Router} from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Item } from '../../models/item';
+import { ItemService } from '../../services/item.service';
 
 @Component({
   selector: 'app-create',

@@ -1,4 +1,18 @@
 <div class="background-card">
+<div class="search-section">
+  <div class="search-input-wrapper">
+    <input #filter
+           class="form-control search-input"
+           name="inputsearch"
+           id="inputsearch"
+           type="search"
+           placeholder="Search your packing lists..."
+           aria-label="Search"
+           (input)="filterItems(filter.value)">
+    <fa-icon [icon]="faSearch" class="search-icon"></fa-icon>
+  </div>
+</div>
+
   @if (items$ | async; as items) {
     <div class="container">
       <div class="custom-table">
