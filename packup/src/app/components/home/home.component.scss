@@ -75,6 +75,46 @@ $success-green: #28a745;
     position: sticky;
     top: 0;
     z-index: 1;
+
+    th {
+      cursor: pointer;
+      padding: 12px 20px;
+      text-align: left;
+      position: relative;
+      transition: all 0.3s ease;
+      user-select: none;
+
+      &:hover {
+        background-color: lighten($turquoise, 10%);
+        transform: scale(1.05);
+      }
+
+      &:active {
+        background-color: darken($turquoise, 10%);
+        transform: scale(0.95);
+      }
+
+      &::after {
+        content: "▲";
+        position: absolute;
+        right: 10px;
+        font-size: 0.8rem;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: translateY(-10px);
+      }
+
+      &.sorted-asc::after {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      &.sorted-desc::after {
+        content: "▼";
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 
   th, td {

@@ -1,30 +1,30 @@
 <div class="background-card">
-<div class="search-section">
-  <div class="search-input-wrapper">
-    <input #filter
-           class="form-control search-input"
-           name="inputsearch"
-           id="inputsearch"
-           type="search"
-           placeholder="Search your packing lists..."
-           aria-label="Search"
-           (input)="filterItems(filter.value)">
-    <fa-icon [icon]="faSearch" class="search-icon"></fa-icon>
+  <div class="search-section">
+    <div class="search-input-wrapper">
+      <input #filter
+             class="form-control search-input"
+             name="inputsearch"
+             id="inputsearch"
+             type="search"
+             placeholder="Search your packing lists..."
+             aria-label="Search"
+             (input)="filterItems(filter.value)">
+      <fa-icon [icon]="faSearch" class="search-icon"></fa-icon>
+    </div>
   </div>
-</div>
 
   @if (items$ | async; as items) {
     <div class="container">
       <div class="custom-table">
         <table>
           <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Packlist</th>
-            <th scope="col">Status</th>
-            <th scope="col" class="actions-column">Actions</th>
-          </tr>
+            <tr>
+              <th scope="col" (click)="onSort('id')">ID</th>
+              <th scope="col" (click)="onSort('name')">Name</th>
+              <th scope="col" (click)="onSort('packlist')">Packlist</th>
+              <th scope="col" (click)="onSort('status')">Status</th>
+              <th scope="col" class="actions-column">Actions</th>
+            </tr>
           </thead>
         </table>
         <div class="table-body-scroll">
@@ -37,7 +37,7 @@
                   <td>{{ item.packlist }}</td>
                   <td>{{ item.status }}</td>
                   <td class="actions">
-                    <button class="btn icon-button edit-button" [routerLink]="['/items/edit',item.id]">
+                    <button class="btn icon-button edit-button" [routerLink]="['/items/edit', item.id]">
                       <fa-icon [icon]="faEdit"></fa-icon>
                     </button>
                     <button class="btn icon-button delete-button" (click)="onDelete(item.id)">
